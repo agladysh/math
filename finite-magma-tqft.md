@@ -2,39 +2,41 @@
 
 *Alexander Gladysh <agladysh@logiceditor.com>*
 
-*Derived with Kimi 2 (Moonshot AI)**
+*Derived with Kimi 2 (Moonshot AI)*
 
 **Abstract.**
-We exhibit a single first-order sentence (a finite pointed magma with a length function) that generates a complete 4-dimensional state-sum TQFT on closed manifolds.  Importing a Hochschild 4-cocycle then extends the same construction to a once-extended, invertible ∞-categorical TQFT.  Higher coherence is optional.
+We exhibit a single first-order sentence (a finite pointed magma with a length function) that generates a complete $4$-dimensional state-sum TQFT on closed manifolds.  Importing a Hochschild $4$-cocycle then extends the same construction to a once-extended, invertible $(∞,4)$-categorical TQFT.  Higher coherence is optional.
 
 ---
 
-## 1.  Minimal axiom: 𝓕
+## 1.  Minimal axiom: $\mathcal F$
 
-Axiom 𝓕 is the conjunction of
-
-1. a finite pointed magma 𝔪 = (M, •, e);
-2. a ternary relation S ⊆ M × M × ℕ such that
-  ∀x,y ∃!k S(x,y,k) (write k = ρ(x→y));
-3. ρ obeys the triangle inequality ρ(x→y)+ρ(y→z) ≥ ρ(x→z);
-4. every endofunctor F on Set^{M^op} that preserves ρ has a unique fixed point.
+Axiom $\mathcal F$ is the conjunction of
+1.  a finite pointed magma $\mathfrak m=(M,\bullet,e)$;
+2.  a ternary relation $S\subseteq M\times M\times\mathbb N$ such that
+   $$\forall x,y\ \exists!k\ S(x,y,k)\quad\text{(write }k=\rho(x\to y)\text{)};$$
+3.  the triangle inequality
+   $$\rho(x\to y)+\rho(y\to z)\ge\rho(x\to z);$$
+4.  every endofunctor $F$ on $\mathbf{Set}^{M^{\mathrm{op}}}$ that preserves $\rho$ has a unique fixed point.
 
 ---
 
-## 2.  State-sum TQFT from 𝓕
+## 2.  State-sum TQFT from $\mathcal F$
 
-1. Triangulate any closed 4-manifold W into 4-simplices Δ⁴.
-2. Colour edges by elements of M.
-3. Weight of a simplex:
-  w(Δ⁴) = ω(c₀,c₁,c₂,c₃) where ω is the 4-cocycle derived from •.
-4. Partition function:
-  Z(W) = ∑_{colourings} ∏_{Δ⁴} w(Δ⁴) ∈ ℂ.
+1.  Triangulate any closed $4$-manifold $W$ into $4$-simplices $\Delta^{4}$.
+2.  Colour edges by elements of $M$.
+3.  Weight of a simplex:
+   $$w(\Delta^{4})=\omega(c_{0},c_{1},c_{2},c_{3}),$$
+   where $\omega$ is the $4$-cocycle derived from $\bullet$.
+4.  Partition function:
+   $$Z(W)=\sum_{\text{colourings}}\prod_{\Delta^{4}}w(\Delta^{4})\in\mathbb C.$$
 
-Properties
-
+**Properties**
 - Finite sum, polynomial-time computable.
-- Invariant under Pachner moves (ω is a cocycle).
-- Symmetric monoidal functor Z : Bord₄ → Vect_ℂ on the ordinary 2-category.
+- Invariant under Pachner moves (because $\omega$ is a cocycle).
+- Symmetric monoidal functor
+  $$Z\colon\mathbf{Bord}_{4}\longrightarrow\mathbf{Vect}_{\mathbb C}$$
+  on the ordinary $2$-category of bordisms.
 
 ---
 
@@ -42,25 +44,32 @@ Properties
 
 Add the single higher-order axiom:
 
-> There exists a small site 𝒮 and 𝓤 ∈ HH⁴(Sh(𝒮)) with δ𝓤 = 0 whose truncation to N(M) is ω.
+> There exists a small site $\mathcal S$ and
+> $$\mathcal U\in H^{4}\!\bigl(\mathbf{Sh}(\mathcal S),\mathbb Z\bigr),\quad\delta\mathcal U=0,$$
+> whose truncation to the nerve of $M$ is $\omega$.
 
-Define 𝕋 := colim_{r∈τ} Sh(𝒮)/r.
-Then 𝕋 is the ∞-topos carrying the once-extended 5-stage invertible TQFT, and the embedding 𝑺 := Sh(𝔪/ρ) ↪ 𝕋 is conservative on closed manifolds.
+Define
+$$\mathbb T:=\mathrm{colim}_{r\in\tau}\,\mathbf{Sh}(\mathcal S)_{/r},$$
+where
+$$\tau=\{r\mid\mathrm{rank}\,H^{4}(r^{*}\mathcal U)\ge\mathrm{rank}\,H^{4}(\mathcal U)\}.$$
+Then $\mathbb T$ is the $(∞,1)$-topos carrying the once-extended $5$-stage invertible TQFT, and the embedding
+$$\mathcal S:=\mathbf{Sh}(\mathfrak m/\rho)\hookrightarrow\mathbb T$$
+is conservative on closed manifolds.
 
 ---
 
 ## 4.  Portability slogan
 
-Finite model 𝓕 → via inclusion of sites → Higher model 𝓤
-Both Z’s coincide on closed 4-manifolds; higher coherence adds only boundary data.
+Finite model $\mathcal F$ $\xrightarrow[\text{of sites}]{\text{inclusion}}$ Higher model $\mathcal U$
+Both $Z$’s coincide on closed $4$-manifolds; higher coherence merely adds boundary data.
 
 ---
 
 ## References
 
-- Barendregt, _The Lambda Calculus_, 1984.
-- Lurie, _Higher Topos Theory_, 2009.
-- Statman, _Combinatory completeness in finite magmas_, 1986.
+- H. Barendregt, *The Lambda Calculus*, North-Holland, 1984.
+- J. Lurie, *Higher Topos Theory*, Ann. Math. Studies 170, 2009.
+- R. Statman, *Combinatory completeness in finite magmas*, Theor. Comput. Sci. **43** (1986), 3–12.
 
 ---
 
