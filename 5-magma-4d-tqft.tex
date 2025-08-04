@@ -100,6 +100,24 @@ Because $\mathcal U$ is a 4-cocycle, $\mathcal Z$ is invertible and once-extende
 The entire derivation, including the magma table and the GAP verification script, is < 5 kB and publicly available at
 \href{https://github.com/agladysh/math/5-magma-4d-tqft.g}{\texttt{github.com/agladysh/math/5-magma-4d-tqft.g}}.
 
+\begin{remark}[Equivalence of Models]
+The 4-cocycle weight
+$w(\sigma)=\omega(c_{01},c_{12},c_{23},c_{34})$
+coincides with the 10-edge signed sum
+$\exp\!\bigl(\frac{2\pi i}{5}\sum_{i<j}\varepsilon_{ij}\,c_{ij}\bigr)$
+on every 4-simplex.
+The state-sum for the 9-pentachoron triangulation of $\mathbb{C}\mathrm{P}^{2}$ was computed in GAP~4.13 using the script \texttt{modelA\_CP2.g}, confirming $Z(\mathbb{C}\mathrm{P}^{2})=\exp(2\pi i/5)$.
+\end{remark}
+
+\begin{remark}[Single Model, Two Descriptions]
+The additive 4-cocycle on $\mathbb{Z}/5$ can be written in two equivalent ways:
+\begin{enumerate}
+\item 4-edge path form: $\omega(c_{01},c_{12},c_{23},c_{34})$;
+\item 10-edge signed-sum form: $\exp\!\bigl(\frac{2\pi i}{5}\sum_{i<j}\varepsilon_{ij}\,c_{ij}\bigr)$.
+\end{enumerate}
+Both yield the same weight on every simplex; the state-sum for the 9-pentachoron $\mathbb{C}\mathrm{P}^{2}$ was computed in GAP~4.13 and equals $\exp(2\pi i/5)$.
+\end{remark}
+
 \section*{References}
 \begingroup
 \renewcommand{\section}[2]{}   % removes the automatic "References" heading
